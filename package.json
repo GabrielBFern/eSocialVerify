@@ -16,6 +16,11 @@
   "bugs": {
     "url": "https://github.com/GabrielBFern/eSocialVerify/issues"
   },
+  "eslintConfig": {
+    "rules": {
+        "no-global-assign": ["error", {"exceptions": ["$:true"]}]
+    }
+  },
   "homepage": "https://github.com/GabrielBFern/eSocialVerify#readme",
   "dependencies": {
     "cheerio": "^1.0.0-rc.2",

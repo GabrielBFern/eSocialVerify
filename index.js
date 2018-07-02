@@ -1,14 +1,13 @@
-var request = require('request');
-var cheerio = require('cheerio');
+/* eslint-env jquery */
+/* eslint no-global-assign: "off" */
 
+var request = require('request')
+var cheerio = require('cheerio')
 
-request('http://www.feevale.br/graduacao/ciencia-da-computacao/estrutura-curricular', function (error, response, html) {
-  if (!error && response.statusCode == 200) {
+request('http://portal.esocial.gov.br/institucional/documentacao-tecnica', function (error, response, html) {
+  if (!error && response.statusCode === 200) {
     // Carrega o site
-    $ = cheerio.load(html);
-
-    $('div').each(function (i, element) {
-      var atual = $(this);
-      console.log()
-    });
+    $ = cheerio.load(html)
+    console.log($('#content-core').html())
   }
+})
